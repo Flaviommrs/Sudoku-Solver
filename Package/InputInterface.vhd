@@ -1,58 +1,64 @@
 library ieee;
 use ieee.std_logic_1164.all;
+USE ieee.numeric_std.ALL;
 
 Entity InputInterface is
 	port(enter,
-		 	 backspace,
-		 	 clear,
-		 	 y,
-		 	 x,
-		 	 xdir,
-		 	 ydir,
-		 	 done: in std_logic;
-		 	 data: in std_logic_vector(3 downto 0);
-		 	 clr_out,
-		 	 load,
-		 	 go,
-			 erase: out std_logic;
-			 data_out: out std_logic_vector(3 downto 0);
-		 	 position: out std_logic_vector(6 downto 0));
+		 clear,
+		 y,
+	 	 x,
+	 	 xdir,
+	 	 ydir,
+	 	 done: in std_logic;
+	 	 data: in std_logic_vector(3 downto 0);
+	 	 load,
+	 	 go,
+		 erase: out std_logic;
+		 data_out: out std_logic_vector(3 downto 0);
+	 	 position: out std_logic_vector(6 downto 0)
+	 	);
 end InputInterface;
 
 Architecture behavior of InputInterface is
 
-
+	signal temp_pos: std_logic_vector(6 downto 0);
 
 begin
+
+	load <= enter;
+	erase <= clear;
+	go <= done;
+
+	data_out <= data;
+
 
 	Movement:
 	process (x, y)
 
-	variable pos:integer:= 0;
-
 	begin
 
-		if x'EVENT and x = '1' then
+		if x = '1' then
 			if xdir = '1' then
-				pos:= pos + 1;
+				temp_pos <= temp_pos + '1';
 			elsif xdir = '0' then
-				pos:= pos - 1;
+				temp_pos<= temp_pos - '1';
 			end if;
-		elsif y'EVENT and y = '1' then
+		elsif y = '1' then
 			if ydir = '1' then
-				pos:= pos + 9;
+				temp_pos<= temp_pos + "1001";
 			elsif ydir = '0' then
-				pos:= pos - 9;
+				temp_pos<= temp_pos - "1001";
 			end if;
 		end if;
 
-		if pos >= 80 then
-			pos:= pos - 81;
-		elsif pos <= 0 then
-			pos:= pos + 81;
+		if temp_pos >= 80 then
+			temp_pos<= temp_pos - to_unsigned(81, position'LENGTH);
+		elsif temp_pos <= 0 then
+			temp_pos<= temp_pos + to_unsigned(81, position'LENGTH);
 		end if;
 
-		position <= pos;
 	end process;
+	
+	position <= temp_pos;
 
 end behavior;
