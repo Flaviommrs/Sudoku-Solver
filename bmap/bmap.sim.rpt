@@ -1,0 +1,450 @@
+Simulator report for bmap
+Sun Jun 21 18:20:50 2015
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 186 nodes    ;
+; Simulation Coverage         ;      25.91 % ;
+; Total Number of Transitions ; 690          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C20F484C7 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      25.91 % ;
+; Total nodes checked                                 ; 186          ;
+; Total output ports checked                          ; 193          ;
+; Total output ports with complete 1/0-value coverage ; 50           ;
+; Total output ports with no 1/0-value coverage       ; 96           ;
+; Total output ports with no 1-value coverage         ; 109          ;
+; Total output ports with no 0-value coverage         ; 130          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                                                                                                                ;
++--------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                                                  ; Output Port Name                                                                                                                           ; Output Port Type ;
++--------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+------------------+
+; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_1~2                               ; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_1~2                               ; combout          ;
+; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_1~5                               ; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_1~5                               ; cout             ;
+; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_1~6                               ; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_1~6                               ; combout          ;
+; |bmap|lpm_divide:Div0|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_1~0                               ; |bmap|lpm_divide:Div0|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_1~0                               ; combout          ;
+; |bmap|lpm_divide:Div0|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_1~0                               ; |bmap|lpm_divide:Div0|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_1~1                               ; cout             ;
+; |bmap|lpm_divide:Div0|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_1~2                               ; |bmap|lpm_divide:Div0|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_1~2                               ; combout          ;
+; |bmap|lpm_divide:Div0|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_1~2                               ; |bmap|lpm_divide:Div0|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_1~3                               ; cout             ;
+; |bmap|lpm_divide:Div0|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_1~5                               ; |bmap|lpm_divide:Div0|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_1~5                               ; cout             ;
+; |bmap|lpm_divide:Div0|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_1~6                               ; |bmap|lpm_divide:Div0|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_1~6                               ; combout          ;
+; |bmap|lpm_divide:Div0|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_2~3                               ; |bmap|lpm_divide:Div0|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_2~3                               ; cout             ;
+; |bmap|lpm_divide:Div0|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_2~4                               ; |bmap|lpm_divide:Div0|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_2~4                               ; combout          ;
+; |bmap|Add1~0                                                                                                                               ; |bmap|Add1~0                                                                                                                               ; combout          ;
+; |bmap|Add1~2                                                                                                                               ; |bmap|Add1~2                                                                                                                               ; combout          ;
+; |bmap|Add1~2                                                                                                                               ; |bmap|Add1~3                                                                                                                               ; cout             ;
+; |bmap|Add1~4                                                                                                                               ; |bmap|Add1~4                                                                                                                               ; combout          ;
+; |bmap|Add1~4                                                                                                                               ; |bmap|Add1~5                                                                                                                               ; cout             ;
+; |bmap|Add1~6                                                                                                                               ; |bmap|Add1~6                                                                                                                               ; combout          ;
+; |bmap|l[8]                                                                                                                                 ; |bmap|l[8]                                                                                                                                 ; regout           ;
+; |bmap|x~8                                                                                                                                  ; |bmap|x~8                                                                                                                                  ; combout          ;
+; |bmap|l[8]~9                                                                                                                               ; |bmap|l[8]~9                                                                                                                               ; combout          ;
+; |bmap|Decoder1~0                                                                                                                           ; |bmap|Decoder1~0                                                                                                                           ; combout          ;
+; |bmap|c[0]~0                                                                                                                               ; |bmap|c[0]~0                                                                                                                               ; combout          ;
+; |bmap|Decoder1~4                                                                                                                           ; |bmap|Decoder1~4                                                                                                                           ; combout          ;
+; |bmap|c[4]~4                                                                                                                               ; |bmap|c[4]~4                                                                                                                               ; combout          ;
+; |bmap|Decoder1~6                                                                                                                           ; |bmap|Decoder1~6                                                                                                                           ; combout          ;
+; |bmap|Decoder1~7                                                                                                                           ; |bmap|Decoder1~7                                                                                                                           ; combout          ;
+; |bmap|Decoder1~8                                                                                                                           ; |bmap|Decoder1~8                                                                                                                           ; combout          ;
+; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|StageOut[6]~4                        ; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|StageOut[6]~4                        ; combout          ;
+; |bmap|lpm_divide:Div0|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|StageOut[7]~3                        ; |bmap|lpm_divide:Div0|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|StageOut[7]~3                        ; combout          ;
+; |bmap|lpm_divide:Div0|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|StageOut[6]~4                        ; |bmap|lpm_divide:Div0|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|StageOut[6]~4                        ; combout          ;
+; |bmap|Add0~0                                                                                                                               ; |bmap|Add0~0                                                                                                                               ; combout          ;
+; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|add_sub_mkc:add_sub_1|carry_eqn[1]~0 ; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|add_sub_mkc:add_sub_1|carry_eqn[1]~0 ; combout          ;
+; |bmap|Add0~1                                                                                                                               ; |bmap|Add0~1                                                                                                                               ; combout          ;
+; |bmap|Add0~2                                                                                                                               ; |bmap|Add0~2                                                                                                                               ; combout          ;
+; |bmap|Decoder2~0                                                                                                                           ; |bmap|Decoder2~0                                                                                                                           ; combout          ;
+; |bmap|r[0]~0                                                                                                                               ; |bmap|r[0]~0                                                                                                                               ; combout          ;
+; |bmap|Decoder2~2                                                                                                                           ; |bmap|Decoder2~2                                                                                                                           ; combout          ;
+; |bmap|r[2]~2                                                                                                                               ; |bmap|r[2]~2                                                                                                                               ; combout          ;
+; |bmap|Decoder2~3                                                                                                                           ; |bmap|Decoder2~3                                                                                                                           ; combout          ;
+; |bmap|r[3]~3                                                                                                                               ; |bmap|r[3]~3                                                                                                                               ; combout          ;
+; |bmap|Decoder2~4                                                                                                                           ; |bmap|Decoder2~4                                                                                                                           ; combout          ;
+; |bmap|r[4]~4                                                                                                                               ; |bmap|r[4]~4                                                                                                                               ; combout          ;
+; |bmap|Decoder2~6                                                                                                                           ; |bmap|Decoder2~6                                                                                                                           ; combout          ;
+; |bmap|r[6]~6                                                                                                                               ; |bmap|r[6]~6                                                                                                                               ; combout          ;
+; |bmap|Decoder2~8                                                                                                                           ; |bmap|Decoder2~8                                                                                                                           ; combout          ;
+; |bmap|x[8]                                                                                                                                 ; |bmap|x[8]                                                                                                                                 ; padio            ;
+; |bmap|clk                                                                                                                                  ; |bmap|clk~corein                                                                                                                           ; combout          ;
+; |bmap|pos_y[0]                                                                                                                             ; |bmap|pos_y[0]~corein                                                                                                                      ; combout          ;
+; |bmap|pos_y[1]                                                                                                                             ; |bmap|pos_y[1]~corein                                                                                                                      ; combout          ;
+; |bmap|clk~clkctrl                                                                                                                          ; |bmap|clk~clkctrl                                                                                                                          ; outclk           ;
++--------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                                                                     ;
++---------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                           ; Output Port Name                                                                                                    ; Output Port Type ;
++---------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+------------------+
+; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_1~0        ; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_1~1        ; cout             ;
+; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_2~1        ; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_2~1        ; cout             ;
+; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_2~3        ; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_2~3        ; cout             ;
+; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_2~4        ; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_2~4        ; combout          ;
+; |bmap|Add1~0                                                                                                        ; |bmap|Add1~1                                                                                                        ; cout             ;
+; |bmap|l[0]                                                                                                          ; |bmap|l[0]                                                                                                          ; regout           ;
+; |bmap|x~0                                                                                                           ; |bmap|x~0                                                                                                           ; combout          ;
+; |bmap|l[1]                                                                                                          ; |bmap|l[1]                                                                                                          ; regout           ;
+; |bmap|x~1                                                                                                           ; |bmap|x~1                                                                                                           ; combout          ;
+; |bmap|l[2]                                                                                                          ; |bmap|l[2]                                                                                                          ; regout           ;
+; |bmap|x~2                                                                                                           ; |bmap|x~2                                                                                                           ; combout          ;
+; |bmap|l[3]                                                                                                          ; |bmap|l[3]                                                                                                          ; regout           ;
+; |bmap|x~3                                                                                                           ; |bmap|x~3                                                                                                           ; combout          ;
+; |bmap|l[4]                                                                                                          ; |bmap|l[4]                                                                                                          ; regout           ;
+; |bmap|x~4                                                                                                           ; |bmap|x~4                                                                                                           ; combout          ;
+; |bmap|l[5]                                                                                                          ; |bmap|l[5]                                                                                                          ; regout           ;
+; |bmap|x~5                                                                                                           ; |bmap|x~5                                                                                                           ; combout          ;
+; |bmap|l[6]                                                                                                          ; |bmap|l[6]                                                                                                          ; regout           ;
+; |bmap|x~6                                                                                                           ; |bmap|x~6                                                                                                           ; combout          ;
+; |bmap|c[0]                                                                                                          ; |bmap|c[0]                                                                                                          ; regout           ;
+; |bmap|y~0                                                                                                           ; |bmap|y~0                                                                                                           ; combout          ;
+; |bmap|c[1]                                                                                                          ; |bmap|c[1]                                                                                                          ; regout           ;
+; |bmap|y~1                                                                                                           ; |bmap|y~1                                                                                                           ; combout          ;
+; |bmap|c[2]                                                                                                          ; |bmap|c[2]                                                                                                          ; regout           ;
+; |bmap|y~2                                                                                                           ; |bmap|y~2                                                                                                           ; combout          ;
+; |bmap|c[3]                                                                                                          ; |bmap|c[3]                                                                                                          ; regout           ;
+; |bmap|y~3                                                                                                           ; |bmap|y~3                                                                                                           ; combout          ;
+; |bmap|c[4]                                                                                                          ; |bmap|c[4]                                                                                                          ; regout           ;
+; |bmap|y~4                                                                                                           ; |bmap|y~4                                                                                                           ; combout          ;
+; |bmap|r[0]                                                                                                          ; |bmap|r[0]                                                                                                          ; regout           ;
+; |bmap|region~0                                                                                                      ; |bmap|region~0                                                                                                      ; combout          ;
+; |bmap|r[1]                                                                                                          ; |bmap|r[1]                                                                                                          ; regout           ;
+; |bmap|region~1                                                                                                      ; |bmap|region~1                                                                                                      ; combout          ;
+; |bmap|r[2]                                                                                                          ; |bmap|r[2]                                                                                                          ; regout           ;
+; |bmap|region~2                                                                                                      ; |bmap|region~2                                                                                                      ; combout          ;
+; |bmap|r[3]                                                                                                          ; |bmap|r[3]                                                                                                          ; regout           ;
+; |bmap|region~3                                                                                                      ; |bmap|region~3                                                                                                      ; combout          ;
+; |bmap|r[4]                                                                                                          ; |bmap|r[4]                                                                                                          ; regout           ;
+; |bmap|region~4                                                                                                      ; |bmap|region~4                                                                                                      ; combout          ;
+; |bmap|r[6]                                                                                                          ; |bmap|r[6]                                                                                                          ; regout           ;
+; |bmap|region~6                                                                                                      ; |bmap|region~6                                                                                                      ; combout          ;
+; |bmap|r[7]                                                                                                          ; |bmap|r[7]                                                                                                          ; regout           ;
+; |bmap|region~7                                                                                                      ; |bmap|region~7                                                                                                      ; combout          ;
+; |bmap|l[0]~0                                                                                                        ; |bmap|l[0]~0                                                                                                        ; combout          ;
+; |bmap|Decoder0~0                                                                                                    ; |bmap|Decoder0~0                                                                                                    ; combout          ;
+; |bmap|l[0]~1                                                                                                        ; |bmap|l[0]~1                                                                                                        ; combout          ;
+; |bmap|Decoder0~1                                                                                                    ; |bmap|Decoder0~1                                                                                                    ; combout          ;
+; |bmap|l[1]~2                                                                                                        ; |bmap|l[1]~2                                                                                                        ; combout          ;
+; |bmap|Decoder0~2                                                                                                    ; |bmap|Decoder0~2                                                                                                    ; combout          ;
+; |bmap|l[2]~3                                                                                                        ; |bmap|l[2]~3                                                                                                        ; combout          ;
+; |bmap|Decoder0~3                                                                                                    ; |bmap|Decoder0~3                                                                                                    ; combout          ;
+; |bmap|l[3]~4                                                                                                        ; |bmap|l[3]~4                                                                                                        ; combout          ;
+; |bmap|Decoder0~4                                                                                                    ; |bmap|Decoder0~4                                                                                                    ; combout          ;
+; |bmap|l[4]~5                                                                                                        ; |bmap|l[4]~5                                                                                                        ; combout          ;
+; |bmap|Decoder0~5                                                                                                    ; |bmap|Decoder0~5                                                                                                    ; combout          ;
+; |bmap|l[5]~6                                                                                                        ; |bmap|l[5]~6                                                                                                        ; combout          ;
+; |bmap|Decoder0~6                                                                                                    ; |bmap|Decoder0~6                                                                                                    ; combout          ;
+; |bmap|l[6]~7                                                                                                        ; |bmap|l[6]~7                                                                                                        ; combout          ;
+; |bmap|Decoder0~7                                                                                                    ; |bmap|Decoder0~7                                                                                                    ; combout          ;
+; |bmap|l[7]~8                                                                                                        ; |bmap|l[7]~8                                                                                                        ; combout          ;
+; |bmap|Decoder1~1                                                                                                    ; |bmap|Decoder1~1                                                                                                    ; combout          ;
+; |bmap|c[1]~1                                                                                                        ; |bmap|c[1]~1                                                                                                        ; combout          ;
+; |bmap|Decoder1~2                                                                                                    ; |bmap|Decoder1~2                                                                                                    ; combout          ;
+; |bmap|c[2]~2                                                                                                        ; |bmap|c[2]~2                                                                                                        ; combout          ;
+; |bmap|Decoder1~3                                                                                                    ; |bmap|Decoder1~3                                                                                                    ; combout          ;
+; |bmap|c[3]~3                                                                                                        ; |bmap|c[3]~3                                                                                                        ; combout          ;
+; |bmap|Decoder1~5                                                                                                    ; |bmap|Decoder1~5                                                                                                    ; combout          ;
+; |bmap|c[5]~5                                                                                                        ; |bmap|c[5]~5                                                                                                        ; combout          ;
+; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|StageOut[3]~1 ; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|StageOut[3]~1 ; combout          ;
+; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|StageOut[7]~2 ; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|StageOut[7]~2 ; combout          ;
+; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|StageOut[7]~3 ; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|StageOut[7]~3 ; combout          ;
+; |bmap|lpm_divide:Div0|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|StageOut[3]~1 ; |bmap|lpm_divide:Div0|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|StageOut[3]~1 ; combout          ;
+; |bmap|lpm_divide:Div0|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|StageOut[7]~2 ; |bmap|lpm_divide:Div0|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|StageOut[7]~2 ; combout          ;
+; |bmap|Decoder2~1                                                                                                    ; |bmap|Decoder2~1                                                                                                    ; combout          ;
+; |bmap|r[1]~1                                                                                                        ; |bmap|r[1]~1                                                                                                        ; combout          ;
+; |bmap|Decoder2~5                                                                                                    ; |bmap|Decoder2~5                                                                                                    ; combout          ;
+; |bmap|r[5]~5                                                                                                        ; |bmap|r[5]~5                                                                                                        ; combout          ;
+; |bmap|Decoder2~7                                                                                                    ; |bmap|Decoder2~7                                                                                                    ; combout          ;
+; |bmap|r[7]~7                                                                                                        ; |bmap|r[7]~7                                                                                                        ; combout          ;
+; |bmap|x[0]                                                                                                          ; |bmap|x[0]                                                                                                          ; padio            ;
+; |bmap|x[1]                                                                                                          ; |bmap|x[1]                                                                                                          ; padio            ;
+; |bmap|x[2]                                                                                                          ; |bmap|x[2]                                                                                                          ; padio            ;
+; |bmap|x[3]                                                                                                          ; |bmap|x[3]                                                                                                          ; padio            ;
+; |bmap|x[4]                                                                                                          ; |bmap|x[4]                                                                                                          ; padio            ;
+; |bmap|x[5]                                                                                                          ; |bmap|x[5]                                                                                                          ; padio            ;
+; |bmap|x[6]                                                                                                          ; |bmap|x[6]                                                                                                          ; padio            ;
+; |bmap|y[0]                                                                                                          ; |bmap|y[0]                                                                                                          ; padio            ;
+; |bmap|y[1]                                                                                                          ; |bmap|y[1]                                                                                                          ; padio            ;
+; |bmap|y[2]                                                                                                          ; |bmap|y[2]                                                                                                          ; padio            ;
+; |bmap|y[3]                                                                                                          ; |bmap|y[3]                                                                                                          ; padio            ;
+; |bmap|y[4]                                                                                                          ; |bmap|y[4]                                                                                                          ; padio            ;
+; |bmap|region[0]                                                                                                     ; |bmap|region[0]                                                                                                     ; padio            ;
+; |bmap|region[1]                                                                                                     ; |bmap|region[1]                                                                                                     ; padio            ;
+; |bmap|region[2]                                                                                                     ; |bmap|region[2]                                                                                                     ; padio            ;
+; |bmap|region[3]                                                                                                     ; |bmap|region[3]                                                                                                     ; padio            ;
+; |bmap|region[4]                                                                                                     ; |bmap|region[4]                                                                                                     ; padio            ;
+; |bmap|region[6]                                                                                                     ; |bmap|region[6]                                                                                                     ; padio            ;
+; |bmap|region[7]                                                                                                     ; |bmap|region[7]                                                                                                     ; padio            ;
+; |bmap|enableRead                                                                                                    ; |bmap|enableRead~corein                                                                                             ; combout          ;
+; |bmap|number[0]                                                                                                     ; |bmap|number[0]~corein                                                                                              ; combout          ;
+; |bmap|number[3]                                                                                                     ; |bmap|number[3]~corein                                                                                              ; combout          ;
+; |bmap|number[2]                                                                                                     ; |bmap|number[2]~corein                                                                                              ; combout          ;
+; |bmap|pos_x[0]                                                                                                      ; |bmap|pos_x[0]~corein                                                                                               ; combout          ;
+; |bmap|pos_x[1]                                                                                                      ; |bmap|pos_x[1]~corein                                                                                               ; combout          ;
+; |bmap|pos_x[2]                                                                                                      ; |bmap|pos_x[2]~corein                                                                                               ; combout          ;
+; |bmap|enableWrite                                                                                                   ; |bmap|enableWrite~corein                                                                                            ; combout          ;
+; |bmap|clear                                                                                                         ; |bmap|clear~corein                                                                                                  ; combout          ;
+; |bmap|pos_y[2]                                                                                                      ; |bmap|pos_y[2]~corein                                                                                               ; combout          ;
+; |bmap|clear~clkctrl                                                                                                 ; |bmap|clear~clkctrl                                                                                                 ; outclk           ;
++---------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                                                                     ;
++---------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                           ; Output Port Name                                                                                                    ; Output Port Type ;
++---------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+------------------+
+; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_1~0        ; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_1~0        ; combout          ;
+; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_1~2        ; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_1~3        ; cout             ;
+; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_2~1        ; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_2~1        ; cout             ;
+; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_2~3        ; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_2~3        ; cout             ;
+; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_2~4        ; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_2~4        ; combout          ;
+; |bmap|lpm_divide:Div0|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_2~1        ; |bmap|lpm_divide:Div0|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|op_2~1        ; cout             ;
+; |bmap|Add1~0                                                                                                        ; |bmap|Add1~1                                                                                                        ; cout             ;
+; |bmap|l[0]                                                                                                          ; |bmap|l[0]                                                                                                          ; regout           ;
+; |bmap|x~0                                                                                                           ; |bmap|x~0                                                                                                           ; combout          ;
+; |bmap|l[1]                                                                                                          ; |bmap|l[1]                                                                                                          ; regout           ;
+; |bmap|x~1                                                                                                           ; |bmap|x~1                                                                                                           ; combout          ;
+; |bmap|l[2]                                                                                                          ; |bmap|l[2]                                                                                                          ; regout           ;
+; |bmap|x~2                                                                                                           ; |bmap|x~2                                                                                                           ; combout          ;
+; |bmap|l[3]                                                                                                          ; |bmap|l[3]                                                                                                          ; regout           ;
+; |bmap|x~3                                                                                                           ; |bmap|x~3                                                                                                           ; combout          ;
+; |bmap|l[4]                                                                                                          ; |bmap|l[4]                                                                                                          ; regout           ;
+; |bmap|x~4                                                                                                           ; |bmap|x~4                                                                                                           ; combout          ;
+; |bmap|l[5]                                                                                                          ; |bmap|l[5]                                                                                                          ; regout           ;
+; |bmap|x~5                                                                                                           ; |bmap|x~5                                                                                                           ; combout          ;
+; |bmap|l[6]                                                                                                          ; |bmap|l[6]                                                                                                          ; regout           ;
+; |bmap|x~6                                                                                                           ; |bmap|x~6                                                                                                           ; combout          ;
+; |bmap|l[7]                                                                                                          ; |bmap|l[7]                                                                                                          ; regout           ;
+; |bmap|x~7                                                                                                           ; |bmap|x~7                                                                                                           ; combout          ;
+; |bmap|c[0]                                                                                                          ; |bmap|c[0]                                                                                                          ; regout           ;
+; |bmap|y~0                                                                                                           ; |bmap|y~0                                                                                                           ; combout          ;
+; |bmap|c[1]                                                                                                          ; |bmap|c[1]                                                                                                          ; regout           ;
+; |bmap|y~1                                                                                                           ; |bmap|y~1                                                                                                           ; combout          ;
+; |bmap|c[2]                                                                                                          ; |bmap|c[2]                                                                                                          ; regout           ;
+; |bmap|y~2                                                                                                           ; |bmap|y~2                                                                                                           ; combout          ;
+; |bmap|c[3]                                                                                                          ; |bmap|c[3]                                                                                                          ; regout           ;
+; |bmap|y~3                                                                                                           ; |bmap|y~3                                                                                                           ; combout          ;
+; |bmap|c[4]                                                                                                          ; |bmap|c[4]                                                                                                          ; regout           ;
+; |bmap|y~4                                                                                                           ; |bmap|y~4                                                                                                           ; combout          ;
+; |bmap|c[5]                                                                                                          ; |bmap|c[5]                                                                                                          ; regout           ;
+; |bmap|y~5                                                                                                           ; |bmap|y~5                                                                                                           ; combout          ;
+; |bmap|c[6]                                                                                                          ; |bmap|c[6]                                                                                                          ; regout           ;
+; |bmap|y~6                                                                                                           ; |bmap|y~6                                                                                                           ; combout          ;
+; |bmap|c[7]                                                                                                          ; |bmap|c[7]                                                                                                          ; regout           ;
+; |bmap|y~7                                                                                                           ; |bmap|y~7                                                                                                           ; combout          ;
+; |bmap|c[8]                                                                                                          ; |bmap|c[8]                                                                                                          ; regout           ;
+; |bmap|y~8                                                                                                           ; |bmap|y~8                                                                                                           ; combout          ;
+; |bmap|r[0]                                                                                                          ; |bmap|r[0]                                                                                                          ; regout           ;
+; |bmap|region~0                                                                                                      ; |bmap|region~0                                                                                                      ; combout          ;
+; |bmap|r[1]                                                                                                          ; |bmap|r[1]                                                                                                          ; regout           ;
+; |bmap|region~1                                                                                                      ; |bmap|region~1                                                                                                      ; combout          ;
+; |bmap|r[2]                                                                                                          ; |bmap|r[2]                                                                                                          ; regout           ;
+; |bmap|region~2                                                                                                      ; |bmap|region~2                                                                                                      ; combout          ;
+; |bmap|r[3]                                                                                                          ; |bmap|r[3]                                                                                                          ; regout           ;
+; |bmap|region~3                                                                                                      ; |bmap|region~3                                                                                                      ; combout          ;
+; |bmap|r[4]                                                                                                          ; |bmap|r[4]                                                                                                          ; regout           ;
+; |bmap|region~4                                                                                                      ; |bmap|region~4                                                                                                      ; combout          ;
+; |bmap|r[5]                                                                                                          ; |bmap|r[5]                                                                                                          ; regout           ;
+; |bmap|region~5                                                                                                      ; |bmap|region~5                                                                                                      ; combout          ;
+; |bmap|r[6]                                                                                                          ; |bmap|r[6]                                                                                                          ; regout           ;
+; |bmap|region~6                                                                                                      ; |bmap|region~6                                                                                                      ; combout          ;
+; |bmap|r[7]                                                                                                          ; |bmap|r[7]                                                                                                          ; regout           ;
+; |bmap|region~7                                                                                                      ; |bmap|region~7                                                                                                      ; combout          ;
+; |bmap|r[8]                                                                                                          ; |bmap|r[8]                                                                                                          ; regout           ;
+; |bmap|region~8                                                                                                      ; |bmap|region~8                                                                                                      ; combout          ;
+; |bmap|Decoder0~0                                                                                                    ; |bmap|Decoder0~0                                                                                                    ; combout          ;
+; |bmap|l[0]~1                                                                                                        ; |bmap|l[0]~1                                                                                                        ; combout          ;
+; |bmap|Decoder0~1                                                                                                    ; |bmap|Decoder0~1                                                                                                    ; combout          ;
+; |bmap|l[1]~2                                                                                                        ; |bmap|l[1]~2                                                                                                        ; combout          ;
+; |bmap|Decoder0~2                                                                                                    ; |bmap|Decoder0~2                                                                                                    ; combout          ;
+; |bmap|l[2]~3                                                                                                        ; |bmap|l[2]~3                                                                                                        ; combout          ;
+; |bmap|Decoder0~3                                                                                                    ; |bmap|Decoder0~3                                                                                                    ; combout          ;
+; |bmap|l[3]~4                                                                                                        ; |bmap|l[3]~4                                                                                                        ; combout          ;
+; |bmap|Decoder0~4                                                                                                    ; |bmap|Decoder0~4                                                                                                    ; combout          ;
+; |bmap|l[4]~5                                                                                                        ; |bmap|l[4]~5                                                                                                        ; combout          ;
+; |bmap|Decoder0~5                                                                                                    ; |bmap|Decoder0~5                                                                                                    ; combout          ;
+; |bmap|l[5]~6                                                                                                        ; |bmap|l[5]~6                                                                                                        ; combout          ;
+; |bmap|Decoder0~6                                                                                                    ; |bmap|Decoder0~6                                                                                                    ; combout          ;
+; |bmap|l[6]~7                                                                                                        ; |bmap|l[6]~7                                                                                                        ; combout          ;
+; |bmap|l[7]~8                                                                                                        ; |bmap|l[7]~8                                                                                                        ; combout          ;
+; |bmap|Decoder0~8                                                                                                    ; |bmap|Decoder0~8                                                                                                    ; combout          ;
+; |bmap|Decoder1~1                                                                                                    ; |bmap|Decoder1~1                                                                                                    ; combout          ;
+; |bmap|c[1]~1                                                                                                        ; |bmap|c[1]~1                                                                                                        ; combout          ;
+; |bmap|Decoder1~2                                                                                                    ; |bmap|Decoder1~2                                                                                                    ; combout          ;
+; |bmap|c[2]~2                                                                                                        ; |bmap|c[2]~2                                                                                                        ; combout          ;
+; |bmap|Decoder1~3                                                                                                    ; |bmap|Decoder1~3                                                                                                    ; combout          ;
+; |bmap|c[3]~3                                                                                                        ; |bmap|c[3]~3                                                                                                        ; combout          ;
+; |bmap|c[5]~5                                                                                                        ; |bmap|c[5]~5                                                                                                        ; combout          ;
+; |bmap|c[6]~6                                                                                                        ; |bmap|c[6]~6                                                                                                        ; combout          ;
+; |bmap|c[7]~7                                                                                                        ; |bmap|c[7]~7                                                                                                        ; combout          ;
+; |bmap|c[8]~8                                                                                                        ; |bmap|c[8]~8                                                                                                        ; combout          ;
+; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|StageOut[4]~0 ; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|StageOut[4]~0 ; combout          ;
+; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|StageOut[7]~2 ; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|StageOut[7]~2 ; combout          ;
+; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|StageOut[7]~3 ; |bmap|lpm_divide:Div1|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|StageOut[7]~3 ; combout          ;
+; |bmap|lpm_divide:Div0|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|StageOut[4]~0 ; |bmap|lpm_divide:Div0|lpm_divide_rcm:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_cve:divider|StageOut[4]~0 ; combout          ;
+; |bmap|Decoder2~1                                                                                                    ; |bmap|Decoder2~1                                                                                                    ; combout          ;
+; |bmap|r[1]~1                                                                                                        ; |bmap|r[1]~1                                                                                                        ; combout          ;
+; |bmap|r[5]~5                                                                                                        ; |bmap|r[5]~5                                                                                                        ; combout          ;
+; |bmap|Decoder2~7                                                                                                    ; |bmap|Decoder2~7                                                                                                    ; combout          ;
+; |bmap|r[7]~7                                                                                                        ; |bmap|r[7]~7                                                                                                        ; combout          ;
+; |bmap|r[8]~8                                                                                                        ; |bmap|r[8]~8                                                                                                        ; combout          ;
+; |bmap|x[0]                                                                                                          ; |bmap|x[0]                                                                                                          ; padio            ;
+; |bmap|x[1]                                                                                                          ; |bmap|x[1]                                                                                                          ; padio            ;
+; |bmap|x[2]                                                                                                          ; |bmap|x[2]                                                                                                          ; padio            ;
+; |bmap|x[3]                                                                                                          ; |bmap|x[3]                                                                                                          ; padio            ;
+; |bmap|x[4]                                                                                                          ; |bmap|x[4]                                                                                                          ; padio            ;
+; |bmap|x[5]                                                                                                          ; |bmap|x[5]                                                                                                          ; padio            ;
+; |bmap|x[6]                                                                                                          ; |bmap|x[6]                                                                                                          ; padio            ;
+; |bmap|x[7]                                                                                                          ; |bmap|x[7]                                                                                                          ; padio            ;
+; |bmap|y[0]                                                                                                          ; |bmap|y[0]                                                                                                          ; padio            ;
+; |bmap|y[1]                                                                                                          ; |bmap|y[1]                                                                                                          ; padio            ;
+; |bmap|y[2]                                                                                                          ; |bmap|y[2]                                                                                                          ; padio            ;
+; |bmap|y[3]                                                                                                          ; |bmap|y[3]                                                                                                          ; padio            ;
+; |bmap|y[4]                                                                                                          ; |bmap|y[4]                                                                                                          ; padio            ;
+; |bmap|y[5]                                                                                                          ; |bmap|y[5]                                                                                                          ; padio            ;
+; |bmap|y[6]                                                                                                          ; |bmap|y[6]                                                                                                          ; padio            ;
+; |bmap|y[7]                                                                                                          ; |bmap|y[7]                                                                                                          ; padio            ;
+; |bmap|y[8]                                                                                                          ; |bmap|y[8]                                                                                                          ; padio            ;
+; |bmap|region[0]                                                                                                     ; |bmap|region[0]                                                                                                     ; padio            ;
+; |bmap|region[1]                                                                                                     ; |bmap|region[1]                                                                                                     ; padio            ;
+; |bmap|region[2]                                                                                                     ; |bmap|region[2]                                                                                                     ; padio            ;
+; |bmap|region[3]                                                                                                     ; |bmap|region[3]                                                                                                     ; padio            ;
+; |bmap|region[4]                                                                                                     ; |bmap|region[4]                                                                                                     ; padio            ;
+; |bmap|region[5]                                                                                                     ; |bmap|region[5]                                                                                                     ; padio            ;
+; |bmap|region[6]                                                                                                     ; |bmap|region[6]                                                                                                     ; padio            ;
+; |bmap|region[7]                                                                                                     ; |bmap|region[7]                                                                                                     ; padio            ;
+; |bmap|region[8]                                                                                                     ; |bmap|region[8]                                                                                                     ; padio            ;
+; |bmap|enableRead                                                                                                    ; |bmap|enableRead~corein                                                                                             ; combout          ;
+; |bmap|number[3]                                                                                                     ; |bmap|number[3]~corein                                                                                              ; combout          ;
+; |bmap|number[1]                                                                                                     ; |bmap|number[1]~corein                                                                                              ; combout          ;
+; |bmap|number[2]                                                                                                     ; |bmap|number[2]~corein                                                                                              ; combout          ;
+; |bmap|pos_x[3]                                                                                                      ; |bmap|pos_x[3]~corein                                                                                               ; combout          ;
+; |bmap|enableWrite                                                                                                   ; |bmap|enableWrite~corein                                                                                            ; combout          ;
+; |bmap|clear                                                                                                         ; |bmap|clear~corein                                                                                                  ; combout          ;
+; |bmap|pos_y[3]                                                                                                      ; |bmap|pos_y[3]~corein                                                                                               ; combout          ;
+; |bmap|clear~clkctrl                                                                                                 ; |bmap|clear~clkctrl                                                                                                 ; outclk           ;
++---------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sun Jun 21 18:20:47 2015
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off bmap -c bmap
+Info: Using vector source file "F:/MC 613/bmap/bmap.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      25.91 %
+Info: Number of transitions in simulation is 690
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 153 megabytes
+    Info: Processing ended: Sun Jun 21 18:20:50 2015
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:00
+
+

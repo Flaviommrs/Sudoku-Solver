@@ -1,0 +1,19 @@
+|Mux4to1
+vec1[0] => answer.DATAB
+vec1[1] => answer.DATAB
+vec1[2] => answer.DATAB
+vec1[3] => answer.DATAB
+vec2[0] => answer.DATAA
+vec2[1] => answer.DATAA
+vec2[2] => answer.DATAA
+vec2[3] => answer.DATAA
+param => answer.OUTPUTSELECT
+param => answer.OUTPUTSELECT
+param => answer.OUTPUTSELECT
+param => answer.OUTPUTSELECT
+answer[0] <= answer.DB_MAX_OUTPUT_PORT_TYPE
+answer[1] <= answer.DB_MAX_OUTPUT_PORT_TYPE
+answer[2] <= answer.DB_MAX_OUTPUT_PORT_TYPE
+answer[3] <= answer.DB_MAX_OUTPUT_PORT_TYPE
+
+

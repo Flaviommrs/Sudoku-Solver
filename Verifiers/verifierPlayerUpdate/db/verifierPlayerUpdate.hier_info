@@ -1,0 +1,13 @@
+|verifierPlayerUpdate
+en => regretSolution_Player.IN1
+en => Updatable.IN1
+en => Updated_inSolution.IN1
+isManager => regretSolution_Player.IN0
+isManager => Updated_inSolution.IN0
+player => Updated_inSolution.IN1
+player => regretSolution_Player.IN1
+regretSolution_Player <= regretSolution_Player.DB_MAX_OUTPUT_PORT_TYPE
+Updatable <= Updatable.DB_MAX_OUTPUT_PORT_TYPE
+Updated_inSolution <= Updated_inSolution.DB_MAX_OUTPUT_PORT_TYPE
+
+

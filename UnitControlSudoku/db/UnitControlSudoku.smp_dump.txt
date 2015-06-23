@@ -1,0 +1,15 @@
+
+State Machine - |UnitControlSudoku|current_state
+Name current_state.Sol_Finish current_state.Sol_Record current_state.Sol_downPos current_state.Sol_upPos current_state.Sol_Num_Upg current_state.Sol_Judge current_state.Sol_Verify current_state.Sol_reset current_state.InputErasing current_state.InputRecording current_state.Input_Verifications current_state.Input 
+current_state.Input 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.Input_Verifications 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.InputRecording 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.InputErasing 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.Sol_reset 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.Sol_Verify 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.Sol_Judge 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.Sol_Num_Upg 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.Sol_upPos 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.Sol_downPos 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.Sol_Record 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.Sol_Finish 1 0 0 0 0 0 0 0 0 0 0 1 

@@ -1,0 +1,385 @@
+Classic Timing Analyzer report for InputInterface
+Mon Jun 22 23:38:35 2015
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'y'
+  7. Clock Setup: 'x'
+  8. tsu
+  9. tco
+ 10. th
+ 11. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                          ;
++------------------------------+-------+---------------+------------------------------------------------+-------------------------+-------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                                    ; From                    ; To                      ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+------------------------------------------------+-------------------------+-------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 6.876 ns                                       ; enable                  ; count_adder:MovX|BCD[3] ; --         ; x        ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 8.177 ns                                       ; load~reg0               ; load                    ; clk        ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -3.127 ns                                      ; enter                   ; load~reg0               ; --         ; clk      ; 0            ;
+; Clock Setup: 'x'             ; N/A   ; None          ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovX|BCD[1] ; count_adder:MovX|BCD[3] ; x          ; x        ; 0            ;
+; Clock Setup: 'y'             ; N/A   ; None          ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovY|BCD[3] ; count_adder:MovY|BCD[3] ; y          ; y        ; 0            ;
+; Total number of failed paths ;       ;               ;                                                ;                         ;                         ;            ;          ; 0            ;
++------------------------------+-------+---------------+------------------------------------------------+-------------------------+-------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2C20F484C7       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; y               ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; x               ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'y'                                                                                                                                                                                                       ;
++-------+------------------------------------------------+-------------------------+-------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                    ; To                      ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+-------------------------+-------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovY|BCD[3] ; count_adder:MovY|BCD[3] ; y          ; y        ; None                        ; None                      ; 2.197 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovY|BCD[0] ; count_adder:MovY|BCD[3] ; y          ; y        ; None                        ; None                      ; 2.179 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovY|BCD[0] ; count_adder:MovY|BCD[1] ; y          ; y        ; None                        ; None                      ; 2.033 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovY|BCD[3] ; count_adder:MovY|BCD[2] ; y          ; y        ; None                        ; None                      ; 2.027 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovY|BCD[0] ; count_adder:MovY|BCD[2] ; y          ; y        ; None                        ; None                      ; 2.009 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovY|BCD[1] ; count_adder:MovY|BCD[3] ; y          ; y        ; None                        ; None                      ; 1.965 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovY|BCD[2] ; count_adder:MovY|BCD[3] ; y          ; y        ; None                        ; None                      ; 1.894 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovY|BCD[1] ; count_adder:MovY|BCD[2] ; y          ; y        ; None                        ; None                      ; 1.887 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovY|BCD[3] ; count_adder:MovY|BCD[0] ; y          ; y        ; None                        ; None                      ; 1.720 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovY|BCD[3] ; count_adder:MovY|BCD[1] ; y          ; y        ; None                        ; None                      ; 1.720 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovY|BCD[0] ; count_adder:MovY|BCD[0] ; y          ; y        ; None                        ; None                      ; 1.702 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovY|BCD[1] ; count_adder:MovY|BCD[1] ; y          ; y        ; None                        ; None                      ; 1.601 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovY|BCD[2] ; count_adder:MovY|BCD[2] ; y          ; y        ; None                        ; None                      ; 1.464 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovY|BCD[2] ; count_adder:MovY|BCD[0] ; y          ; y        ; None                        ; None                      ; 1.463 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovY|BCD[2] ; count_adder:MovY|BCD[1] ; y          ; y        ; None                        ; None                      ; 1.463 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovY|BCD[1] ; count_adder:MovY|BCD[0] ; y          ; y        ; None                        ; None                      ; 1.367 ns                ;
++-------+------------------------------------------------+-------------------------+-------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'x'                                                                                                                                                                                                       ;
++-------+------------------------------------------------+-------------------------+-------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                    ; To                      ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+-------------------------+-------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovX|BCD[1] ; count_adder:MovX|BCD[3] ; x          ; x        ; None                        ; None                      ; 2.329 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovX|BCD[0] ; count_adder:MovX|BCD[2] ; x          ; x        ; None                        ; None                      ; 2.192 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovX|BCD[1] ; count_adder:MovX|BCD[2] ; x          ; x        ; None                        ; None                      ; 2.118 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovX|BCD[0] ; count_adder:MovX|BCD[3] ; x          ; x        ; None                        ; None                      ; 2.086 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovX|BCD[3] ; count_adder:MovX|BCD[3] ; x          ; x        ; None                        ; None                      ; 1.999 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovX|BCD[2] ; count_adder:MovX|BCD[3] ; x          ; x        ; None                        ; None                      ; 1.953 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovX|BCD[0] ; count_adder:MovX|BCD[1] ; x          ; x        ; None                        ; None                      ; 1.894 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovX|BCD[1] ; count_adder:MovX|BCD[1] ; x          ; x        ; None                        ; None                      ; 1.794 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovX|BCD[2] ; count_adder:MovX|BCD[2] ; x          ; x        ; None                        ; None                      ; 1.752 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovX|BCD[1] ; count_adder:MovX|BCD[0] ; x          ; x        ; None                        ; None                      ; 1.489 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovX|BCD[3] ; count_adder:MovX|BCD[2] ; x          ; x        ; None                        ; None                      ; 1.472 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovX|BCD[3] ; count_adder:MovX|BCD[1] ; x          ; x        ; None                        ; None                      ; 1.464 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovX|BCD[0] ; count_adder:MovX|BCD[0] ; x          ; x        ; None                        ; None                      ; 1.246 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovX|BCD[3] ; count_adder:MovX|BCD[0] ; x          ; x        ; None                        ; None                      ; 1.159 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovX|BCD[2] ; count_adder:MovX|BCD[0] ; x          ; x        ; None                        ; None                      ; 1.055 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; count_adder:MovX|BCD[2] ; count_adder:MovX|BCD[1] ; x          ; x        ; None                        ; None                      ; 1.021 ns                ;
++-------+------------------------------------------------+-------------------------+-------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------+
+; tsu                                                                              ;
++-------+--------------+------------+---------+-------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From    ; To                      ; To Clock ;
++-------+--------------+------------+---------+-------------------------+----------+
+; N/A   ; None         ; 6.876 ns   ; enable  ; count_adder:MovX|BCD[0] ; x        ;
+; N/A   ; None         ; 6.876 ns   ; enable  ; count_adder:MovX|BCD[2] ; x        ;
+; N/A   ; None         ; 6.876 ns   ; enable  ; count_adder:MovX|BCD[1] ; x        ;
+; N/A   ; None         ; 6.876 ns   ; enable  ; count_adder:MovX|BCD[3] ; x        ;
+; N/A   ; None         ; 6.735 ns   ; enable  ; count_adder:MovY|BCD[0] ; y        ;
+; N/A   ; None         ; 6.735 ns   ; enable  ; count_adder:MovY|BCD[2] ; y        ;
+; N/A   ; None         ; 6.735 ns   ; enable  ; count_adder:MovY|BCD[3] ; y        ;
+; N/A   ; None         ; 6.735 ns   ; enable  ; count_adder:MovY|BCD[1] ; y        ;
+; N/A   ; None         ; 5.106 ns   ; clear   ; count_adder:MovX|BCD[0] ; x        ;
+; N/A   ; None         ; 5.106 ns   ; clear   ; count_adder:MovX|BCD[2] ; x        ;
+; N/A   ; None         ; 5.106 ns   ; clear   ; count_adder:MovX|BCD[1] ; x        ;
+; N/A   ; None         ; 5.106 ns   ; clear   ; count_adder:MovX|BCD[3] ; x        ;
+; N/A   ; None         ; 4.965 ns   ; clear   ; count_adder:MovY|BCD[0] ; y        ;
+; N/A   ; None         ; 4.965 ns   ; clear   ; count_adder:MovY|BCD[2] ; y        ;
+; N/A   ; None         ; 4.965 ns   ; clear   ; count_adder:MovY|BCD[3] ; y        ;
+; N/A   ; None         ; 4.965 ns   ; clear   ; count_adder:MovY|BCD[1] ; y        ;
+; N/A   ; None         ; 4.811 ns   ; xdir    ; count_adder:MovX|BCD[3] ; x        ;
+; N/A   ; None         ; 4.801 ns   ; enable  ; erase~reg0              ; clk      ;
+; N/A   ; None         ; 4.800 ns   ; enable  ; data_out[2]~reg0        ; clk      ;
+; N/A   ; None         ; 4.799 ns   ; enable  ; load~reg0               ; clk      ;
+; N/A   ; None         ; 4.798 ns   ; enable  ; go~reg0                 ; clk      ;
+; N/A   ; None         ; 4.798 ns   ; enable  ; data_out[0]~reg0        ; clk      ;
+; N/A   ; None         ; 4.798 ns   ; enable  ; data_out[1]~reg0        ; clk      ;
+; N/A   ; None         ; 4.797 ns   ; enable  ; data_out[3]~reg0        ; clk      ;
+; N/A   ; None         ; 4.723 ns   ; ydir    ; count_adder:MovY|BCD[3] ; y        ;
+; N/A   ; None         ; 4.599 ns   ; xdir    ; count_adder:MovX|BCD[2] ; x        ;
+; N/A   ; None         ; 4.553 ns   ; ydir    ; count_adder:MovY|BCD[2] ; y        ;
+; N/A   ; None         ; 4.276 ns   ; xdir    ; count_adder:MovX|BCD[1] ; x        ;
+; N/A   ; None         ; 4.246 ns   ; ydir    ; count_adder:MovY|BCD[0] ; y        ;
+; N/A   ; None         ; 4.246 ns   ; ydir    ; count_adder:MovY|BCD[1] ; y        ;
+; N/A   ; None         ; 3.971 ns   ; xdir    ; count_adder:MovX|BCD[0] ; x        ;
+; N/A   ; None         ; 3.756 ns   ; clear   ; erase~reg0              ; clk      ;
+; N/A   ; None         ; 3.683 ns   ; done    ; go~reg0                 ; clk      ;
+; N/A   ; None         ; 3.648 ns   ; data[2] ; data_out[2]~reg0        ; clk      ;
+; N/A   ; None         ; 3.614 ns   ; data[1] ; data_out[1]~reg0        ; clk      ;
+; N/A   ; None         ; 3.552 ns   ; data[3] ; data_out[3]~reg0        ; clk      ;
+; N/A   ; None         ; 3.403 ns   ; data[0] ; data_out[0]~reg0        ; clk      ;
+; N/A   ; None         ; 3.375 ns   ; enter   ; load~reg0               ; clk      ;
++-------+--------------+------------+---------+-------------------------+----------+
+
+
++-----------------------------------------------------------------------------------------+
+; tco                                                                                     ;
++-------+--------------+------------+-------------------------+--------------+------------+
+; Slack ; Required tco ; Actual tco ; From                    ; To           ; From Clock ;
++-------+--------------+------------+-------------------------+--------------+------------+
+; N/A   ; None         ; 8.177 ns   ; load~reg0               ; load         ; clk        ;
+; N/A   ; None         ; 8.062 ns   ; go~reg0                 ; go           ; clk        ;
+; N/A   ; None         ; 8.027 ns   ; data_out[0]~reg0        ; data_out[0]  ; clk        ;
+; N/A   ; None         ; 7.489 ns   ; data_out[3]~reg0        ; data_out[3]  ; clk        ;
+; N/A   ; None         ; 7.160 ns   ; count_adder:MovX|BCD[3] ; positionY[3] ; x          ;
+; N/A   ; None         ; 7.142 ns   ; count_adder:MovX|BCD[1] ; positionY[1] ; x          ;
+; N/A   ; None         ; 6.892 ns   ; count_adder:MovY|BCD[1] ; positionX[1] ; y          ;
+; N/A   ; None         ; 6.797 ns   ; data_out[1]~reg0        ; data_out[1]  ; clk        ;
+; N/A   ; None         ; 6.788 ns   ; count_adder:MovY|BCD[0] ; positionX[0] ; y          ;
+; N/A   ; None         ; 6.780 ns   ; count_adder:MovY|BCD[2] ; positionX[2] ; y          ;
+; N/A   ; None         ; 6.573 ns   ; erase~reg0              ; erase        ; clk        ;
+; N/A   ; None         ; 6.560 ns   ; count_adder:MovY|BCD[3] ; positionX[3] ; y          ;
+; N/A   ; None         ; 6.551 ns   ; count_adder:MovX|BCD[2] ; positionY[2] ; x          ;
+; N/A   ; None         ; 6.543 ns   ; data_out[2]~reg0        ; data_out[2]  ; clk        ;
+; N/A   ; None         ; 6.541 ns   ; count_adder:MovX|BCD[0] ; positionY[0] ; x          ;
++-------+--------------+------------+-------------------------+--------------+------------+
+
+
++----------------------------------------------------------------------------------------+
+; th                                                                                     ;
++---------------+-------------+-----------+---------+-------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From    ; To                      ; To Clock ;
++---------------+-------------+-----------+---------+-------------------------+----------+
+; N/A           ; None        ; -3.127 ns ; enter   ; load~reg0               ; clk      ;
+; N/A           ; None        ; -3.154 ns ; ydir    ; count_adder:MovY|BCD[3] ; y        ;
+; N/A           ; None        ; -3.155 ns ; data[0] ; data_out[0]~reg0        ; clk      ;
+; N/A           ; None        ; -3.169 ns ; xdir    ; count_adder:MovX|BCD[3] ; x        ;
+; N/A           ; None        ; -3.304 ns ; data[3] ; data_out[3]~reg0        ; clk      ;
+; N/A           ; None        ; -3.366 ns ; data[1] ; data_out[1]~reg0        ; clk      ;
+; N/A           ; None        ; -3.372 ns ; clear   ; count_adder:MovX|BCD[1] ; x        ;
+; N/A           ; None        ; -3.372 ns ; clear   ; count_adder:MovX|BCD[3] ; x        ;
+; N/A           ; None        ; -3.400 ns ; data[2] ; data_out[2]~reg0        ; clk      ;
+; N/A           ; None        ; -3.435 ns ; done    ; go~reg0                 ; clk      ;
+; N/A           ; None        ; -3.505 ns ; clear   ; count_adder:MovX|BCD[0] ; x        ;
+; N/A           ; None        ; -3.506 ns ; clear   ; count_adder:MovY|BCD[2] ; y        ;
+; N/A           ; None        ; -3.508 ns ; clear   ; erase~reg0              ; clk      ;
+; N/A           ; None        ; -3.514 ns ; clear   ; count_adder:MovY|BCD[3] ; y        ;
+; N/A           ; None        ; -3.519 ns ; clear   ; count_adder:MovY|BCD[0] ; y        ;
+; N/A           ; None        ; -3.520 ns ; clear   ; count_adder:MovY|BCD[1] ; y        ;
+; N/A           ; None        ; -3.703 ns ; xdir    ; count_adder:MovX|BCD[1] ; x        ;
+; N/A           ; None        ; -3.723 ns ; xdir    ; count_adder:MovX|BCD[0] ; x        ;
+; N/A           ; None        ; -3.740 ns ; ydir    ; count_adder:MovY|BCD[2] ; y        ;
+; N/A           ; None        ; -3.766 ns ; clear   ; count_adder:MovX|BCD[2] ; x        ;
+; N/A           ; None        ; -3.890 ns ; ydir    ; count_adder:MovY|BCD[1] ; y        ;
+; N/A           ; None        ; -3.896 ns ; xdir    ; count_adder:MovX|BCD[2] ; x        ;
+; N/A           ; None        ; -3.998 ns ; ydir    ; count_adder:MovY|BCD[0] ; y        ;
+; N/A           ; None        ; -4.549 ns ; enable  ; data_out[3]~reg0        ; clk      ;
+; N/A           ; None        ; -4.550 ns ; enable  ; go~reg0                 ; clk      ;
+; N/A           ; None        ; -4.550 ns ; enable  ; data_out[0]~reg0        ; clk      ;
+; N/A           ; None        ; -4.550 ns ; enable  ; data_out[1]~reg0        ; clk      ;
+; N/A           ; None        ; -4.551 ns ; enable  ; load~reg0               ; clk      ;
+; N/A           ; None        ; -4.552 ns ; enable  ; data_out[2]~reg0        ; clk      ;
+; N/A           ; None        ; -4.553 ns ; enable  ; erase~reg0              ; clk      ;
+; N/A           ; None        ; -6.487 ns ; enable  ; count_adder:MovY|BCD[0] ; y        ;
+; N/A           ; None        ; -6.487 ns ; enable  ; count_adder:MovY|BCD[2] ; y        ;
+; N/A           ; None        ; -6.487 ns ; enable  ; count_adder:MovY|BCD[3] ; y        ;
+; N/A           ; None        ; -6.487 ns ; enable  ; count_adder:MovY|BCD[1] ; y        ;
+; N/A           ; None        ; -6.628 ns ; enable  ; count_adder:MovX|BCD[0] ; x        ;
+; N/A           ; None        ; -6.628 ns ; enable  ; count_adder:MovX|BCD[2] ; x        ;
+; N/A           ; None        ; -6.628 ns ; enable  ; count_adder:MovX|BCD[1] ; x        ;
+; N/A           ; None        ; -6.628 ns ; enable  ; count_adder:MovX|BCD[3] ; x        ;
++---------------+-------------+-----------+---------+-------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Mon Jun 22 23:38:34 2015
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off InputInterface -c InputInterface --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "y" is an undefined clock
+    Info: Assuming node "x" is an undefined clock
+    Info: Assuming node "clk" is an undefined clock
+Info: Clock "y" Internal fmax is restricted to 380.08 MHz between source register "count_adder:MovY|BCD[3]" and destination register "count_adder:MovY|BCD[3]"
+    Info: fmax restricted to clock pin edge rate 2.631 ns. Expand message to see actual delay path.
+        Info: + Longest register to register delay is 2.197 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X1_Y21_N31; Fanout = 3; REG Node = 'count_adder:MovY|BCD[3]'
+            Info: 2: + IC(0.378 ns) + CELL(0.521 ns) = 0.899 ns; Loc. = LCCOMB_X1_Y21_N16; Fanout = 4; COMB Node = 'count_adder:MovY|BCD[0]~0'
+            Info: 3: + IC(0.304 ns) + CELL(0.278 ns) = 1.481 ns; Loc. = LCCOMB_X1_Y21_N20; Fanout = 1; COMB Node = 'count_adder:MovY|BCD[0]~3'
+            Info: 4: + IC(0.298 ns) + CELL(0.322 ns) = 2.101 ns; Loc. = LCCOMB_X1_Y21_N30; Fanout = 1; COMB Node = 'count_adder:MovY|BCD~4'
+            Info: 5: + IC(0.000 ns) + CELL(0.096 ns) = 2.197 ns; Loc. = LCFF_X1_Y21_N31; Fanout = 3; REG Node = 'count_adder:MovY|BCD[3]'
+            Info: Total cell delay = 1.217 ns ( 55.39 % )
+            Info: Total interconnect delay = 0.980 ns ( 44.61 % )
+        Info: - Smallest clock skew is 0.000 ns
+            Info: + Shortest clock path from clock "y" to destination register is 2.844 ns
+                Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_L1; Fanout = 1; CLK Node = 'y'
+                Info: 2: + IC(0.238 ns) + CELL(0.000 ns) = 1.264 ns; Loc. = CLKCTRL_G2; Fanout = 4; COMB Node = 'y~clkctrl'
+                Info: 3: + IC(0.978 ns) + CELL(0.602 ns) = 2.844 ns; Loc. = LCFF_X1_Y21_N31; Fanout = 3; REG Node = 'count_adder:MovY|BCD[3]'
+                Info: Total cell delay = 1.628 ns ( 57.24 % )
+                Info: Total interconnect delay = 1.216 ns ( 42.76 % )
+            Info: - Longest clock path from clock "y" to source register is 2.844 ns
+                Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_L1; Fanout = 1; CLK Node = 'y'
+                Info: 2: + IC(0.238 ns) + CELL(0.000 ns) = 1.264 ns; Loc. = CLKCTRL_G2; Fanout = 4; COMB Node = 'y~clkctrl'
+                Info: 3: + IC(0.978 ns) + CELL(0.602 ns) = 2.844 ns; Loc. = LCFF_X1_Y21_N31; Fanout = 3; REG Node = 'count_adder:MovY|BCD[3]'
+                Info: Total cell delay = 1.628 ns ( 57.24 % )
+                Info: Total interconnect delay = 1.216 ns ( 42.76 % )
+        Info: + Micro clock to output delay of source is 0.277 ns
+        Info: + Micro setup delay of destination is -0.038 ns
+Info: Clock "x" Internal fmax is restricted to 380.08 MHz between source register "count_adder:MovX|BCD[1]" and destination register "count_adder:MovX|BCD[3]"
+    Info: fmax restricted to clock pin edge rate 2.631 ns. Expand message to see actual delay path.
+        Info: + Longest register to register delay is 2.329 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X1_Y18_N3; Fanout = 4; REG Node = 'count_adder:MovX|BCD[1]'
+            Info: 2: + IC(0.371 ns) + CELL(0.521 ns) = 0.892 ns; Loc. = LCCOMB_X1_Y18_N0; Fanout = 4; COMB Node = 'count_adder:MovX|BCD[0]~0'
+            Info: 3: + IC(0.323 ns) + CELL(0.178 ns) = 1.393 ns; Loc. = LCCOMB_X1_Y18_N10; Fanout = 1; COMB Node = 'count_adder:MovX|BCD[0]~2'
+            Info: 4: + IC(0.333 ns) + CELL(0.507 ns) = 2.233 ns; Loc. = LCCOMB_X1_Y18_N6; Fanout = 1; COMB Node = 'count_adder:MovX|BCD~3'
+            Info: 5: + IC(0.000 ns) + CELL(0.096 ns) = 2.329 ns; Loc. = LCFF_X1_Y18_N7; Fanout = 3; REG Node = 'count_adder:MovX|BCD[3]'
+            Info: Total cell delay = 1.302 ns ( 55.90 % )
+            Info: Total interconnect delay = 1.027 ns ( 44.10 % )
+        Info: - Smallest clock skew is 0.000 ns
+            Info: + Shortest clock path from clock "x" to destination register is 2.844 ns
+                Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_M2; Fanout = 1; CLK Node = 'x'
+                Info: 2: + IC(0.232 ns) + CELL(0.000 ns) = 1.258 ns; Loc. = CLKCTRL_G1; Fanout = 4; COMB Node = 'x~clkctrl'
+                Info: 3: + IC(0.984 ns) + CELL(0.602 ns) = 2.844 ns; Loc. = LCFF_X1_Y18_N7; Fanout = 3; REG Node = 'count_adder:MovX|BCD[3]'
+                Info: Total cell delay = 1.628 ns ( 57.24 % )
+                Info: Total interconnect delay = 1.216 ns ( 42.76 % )
+            Info: - Longest clock path from clock "x" to source register is 2.844 ns
+                Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_M2; Fanout = 1; CLK Node = 'x'
+                Info: 2: + IC(0.232 ns) + CELL(0.000 ns) = 1.258 ns; Loc. = CLKCTRL_G1; Fanout = 4; COMB Node = 'x~clkctrl'
+                Info: 3: + IC(0.984 ns) + CELL(0.602 ns) = 2.844 ns; Loc. = LCFF_X1_Y18_N3; Fanout = 4; REG Node = 'count_adder:MovX|BCD[1]'
+                Info: Total cell delay = 1.628 ns ( 57.24 % )
+                Info: Total interconnect delay = 1.216 ns ( 42.76 % )
+        Info: + Micro clock to output delay of source is 0.277 ns
+        Info: + Micro setup delay of destination is -0.038 ns
+Info: No valid register-to-register data paths exist for clock "clk"
+Info: tsu for register "count_adder:MovX|BCD[0]" (data pin = "enable", clock pin = "x") is 6.876 ns
+    Info: + Longest pin to register delay is 9.758 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.863 ns) = 0.863 ns; Loc. = PIN_Y5; Fanout = 8; PIN Node = 'enable'
+        Info: 2: + IC(6.738 ns) + CELL(0.521 ns) = 8.122 ns; Loc. = LCCOMB_X1_Y21_N26; Fanout = 8; COMB Node = 'count_adder:MovY|BCD[0]~2'
+        Info: 3: + IC(0.878 ns) + CELL(0.758 ns) = 9.758 ns; Loc. = LCFF_X1_Y18_N9; Fanout = 4; REG Node = 'count_adder:MovX|BCD[0]'
+        Info: Total cell delay = 2.142 ns ( 21.95 % )
+        Info: Total interconnect delay = 7.616 ns ( 78.05 % )
+    Info: + Micro setup delay of destination is -0.038 ns
+    Info: - Shortest clock path from clock "x" to destination register is 2.844 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_M2; Fanout = 1; CLK Node = 'x'
+        Info: 2: + IC(0.232 ns) + CELL(0.000 ns) = 1.258 ns; Loc. = CLKCTRL_G1; Fanout = 4; COMB Node = 'x~clkctrl'
+        Info: 3: + IC(0.984 ns) + CELL(0.602 ns) = 2.844 ns; Loc. = LCFF_X1_Y18_N9; Fanout = 4; REG Node = 'count_adder:MovX|BCD[0]'
+        Info: Total cell delay = 1.628 ns ( 57.24 % )
+        Info: Total interconnect delay = 1.216 ns ( 42.76 % )
+Info: tco from clock "clk" to destination pin "load" through register "load~reg0" is 8.177 ns
+    Info: + Longest clock path from clock "clk" to source register is 2.854 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_M1; Fanout = 1; CLK Node = 'clk'
+        Info: 2: + IC(0.238 ns) + CELL(0.000 ns) = 1.264 ns; Loc. = CLKCTRL_G3; Fanout = 7; COMB Node = 'clk~clkctrl'
+        Info: 3: + IC(0.988 ns) + CELL(0.602 ns) = 2.854 ns; Loc. = LCFF_X1_Y23_N25; Fanout = 1; REG Node = 'load~reg0'
+        Info: Total cell delay = 1.628 ns ( 57.04 % )
+        Info: Total interconnect delay = 1.226 ns ( 42.96 % )
+    Info: + Micro clock to output delay of source is 0.277 ns
+    Info: + Longest register to pin delay is 5.046 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X1_Y23_N25; Fanout = 1; REG Node = 'load~reg0'
+        Info: 2: + IC(2.040 ns) + CELL(3.006 ns) = 5.046 ns; Loc. = PIN_Y6; Fanout = 0; PIN Node = 'load'
+        Info: Total cell delay = 3.006 ns ( 59.57 % )
+        Info: Total interconnect delay = 2.040 ns ( 40.43 % )
+Info: th for register "load~reg0" (data pin = "enter", clock pin = "clk") is -3.127 ns
+    Info: + Longest clock path from clock "clk" to destination register is 2.854 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_M1; Fanout = 1; CLK Node = 'clk'
+        Info: 2: + IC(0.238 ns) + CELL(0.000 ns) = 1.264 ns; Loc. = CLKCTRL_G3; Fanout = 7; COMB Node = 'clk~clkctrl'
+        Info: 3: + IC(0.988 ns) + CELL(0.602 ns) = 2.854 ns; Loc. = LCFF_X1_Y23_N25; Fanout = 1; REG Node = 'load~reg0'
+        Info: Total cell delay = 1.628 ns ( 57.04 % )
+        Info: Total interconnect delay = 1.226 ns ( 42.96 % )
+    Info: + Micro hold delay of destination is 0.286 ns
+    Info: - Shortest pin to register delay is 6.267 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.844 ns) = 0.844 ns; Loc. = PIN_G6; Fanout = 1; PIN Node = 'enter'
+        Info: 2: + IC(4.836 ns) + CELL(0.491 ns) = 6.171 ns; Loc. = LCCOMB_X1_Y23_N24; Fanout = 1; COMB Node = 'load~0'
+        Info: 3: + IC(0.000 ns) + CELL(0.096 ns) = 6.267 ns; Loc. = LCFF_X1_Y23_N25; Fanout = 1; REG Node = 'load~reg0'
+        Info: Total cell delay = 1.431 ns ( 22.83 % )
+        Info: Total interconnect delay = 4.836 ns ( 77.17 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 170 megabytes
+    Info: Processing ended: Mon Jun 22 23:38:36 2015
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:00
+
+

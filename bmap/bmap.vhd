@@ -1,0 +1,63 @@
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
+
+--Serão necessário 9 bitmaps como esse.
+--Cada bitmap corresponde a um número para o cadastro de um vetor para linha, coluna e regiao, que são seus retornos.
+Entity bmap is
+  generic(currentNum : NATURAL := 9);
+  port(
+	pos_x, pos_y, number: in std_logic_vector(3 downto 0);
+	clk, enableWrite,enableRead ,  clear: std_logic;
+	x, y, region :out  std_logic_vector(8 downto 0)
+  );
+  end bmap;
+architecture behavior of bmap is
+signal l, c, r : std_logic_vector(8 downto 0) := (others => '0');
+
+
+begin 
+Update_bmap:
+process(clk, clear, enableWrite)
+	variable li, ci, ri : integer := 0;
+	begin
+	if clear = '1' then
+		l <= (others => '0');
+		c <= (others => '0');
+		r <= (others => '0');
+
+	elsif clk'Event and clk = '1' then
+		if enableWrite = '1' then
+			
+				
+			li := to_integer(unsigned(pos_x));
+			ci := to_integer(unsigned(pos_y));
+			ri := (ci/3)*3 + li/3;
+			if number /= std_logic_vector(to_unsigned(currentNum, number'length)) then
+				l(li) <= '0';
+				c(ci) <= '0';
+				r(ri) <= '0';
+			else
+				l(li) <= '1';
+				c(ci) <= '1';
+				r(ri) <= '1';
+			end if;
+		end if;
+	end if;
+end process;
+
+Read_bmap:
+process(enableRead)
+	begin
+	if enableRead = '1' then
+		x <= l;
+		y <= c;
+		region <= r;
+	else
+		x <= (others => '0');
+		y <= (others => '0');
+		region <= (others => '0');
+	end if;
+end process;
+end behavior;

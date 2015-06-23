@@ -1,0 +1,189 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+11
+980
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+reg
+# storage
+db|bank.(1).cnf
+db|bank.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+reg.vhd
+3631dbb21c13cf7b26feb84c5618c42f
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+4
+PARAMETER_SIGNED_DEC
+USR
+ constraint(data_in)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(data_out)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+reg:\Registers:0:regs
+reg:\Registers:1:regs
+reg:\Registers:2:regs
+reg:\Registers:3:regs
+reg:\Registers:4:regs
+reg:\Registers:5:regs
+reg:\Registers:6:regs
+reg:\Registers:7:regs
+reg:\Registers:8:regs
+reg:\Registers:9:regs
+reg:\Registers:10:regs
+reg:\Registers:11:regs
+reg:\Registers:12:regs
+reg:\Registers:13:regs
+reg:\Registers:14:regs
+reg:\Registers:15:regs
+reg:\Registers:16:regs
+reg:\Registers:17:regs
+reg:\Registers:18:regs
+reg:\Registers:19:regs
+reg:\Registers:20:regs
+reg:\Registers:21:regs
+reg:\Registers:22:regs
+reg:\Registers:23:regs
+reg:\Registers:24:regs
+reg:\Registers:25:regs
+reg:\Registers:26:regs
+reg:\Registers:27:regs
+reg:\Registers:28:regs
+reg:\Registers:29:regs
+reg:\Registers:30:regs
+reg:\Registers:31:regs
+reg:\Registers:32:regs
+reg:\Registers:33:regs
+reg:\Registers:34:regs
+reg:\Registers:35:regs
+reg:\Registers:36:regs
+reg:\Registers:37:regs
+reg:\Registers:38:regs
+reg:\Registers:39:regs
+reg:\Registers:40:regs
+reg:\Registers:41:regs
+reg:\Registers:42:regs
+reg:\Registers:43:regs
+reg:\Registers:44:regs
+reg:\Registers:45:regs
+reg:\Registers:46:regs
+reg:\Registers:47:regs
+reg:\Registers:48:regs
+reg:\Registers:49:regs
+reg:\Registers:50:regs
+reg:\Registers:51:regs
+reg:\Registers:52:regs
+reg:\Registers:53:regs
+reg:\Registers:54:regs
+reg:\Registers:55:regs
+reg:\Registers:56:regs
+reg:\Registers:57:regs
+reg:\Registers:58:regs
+reg:\Registers:59:regs
+reg:\Registers:60:regs
+reg:\Registers:61:regs
+reg:\Registers:62:regs
+reg:\Registers:63:regs
+reg:\Registers:64:regs
+reg:\Registers:65:regs
+reg:\Registers:66:regs
+reg:\Registers:67:regs
+reg:\Registers:68:regs
+reg:\Registers:69:regs
+reg:\Registers:70:regs
+reg:\Registers:71:regs
+reg:\Registers:72:regs
+reg:\Registers:73:regs
+reg:\Registers:74:regs
+reg:\Registers:75:regs
+reg:\Registers:76:regs
+reg:\Registers:77:regs
+reg:\Registers:78:regs
+reg:\Registers:79:regs
+reg:\Registers:80:regs
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+bank
+# storage
+db|bank.(0).cnf
+db|bank.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+bank.vhd
+12c829fd171028145a38e8975a456da5
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+WORDSIZE
+4
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+|
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# complete
+

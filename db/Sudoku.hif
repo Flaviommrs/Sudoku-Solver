@@ -1,0 +1,958 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+11
+980
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+Sudoku
+# storage
+db|Sudoku.(0).cnf
+db|Sudoku.(0).cnf
+# case_insensitive
+# source_file
+toplevel|sudoku.bdf
+9b8ecbb48eeaaec9ef08c65e1e4c83d
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+bank
+# storage
+db|Sudoku.(1).cnf
+db|Sudoku.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+bank|bank.vhd
+12c829fd171028145a38e8975a456da5
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+wordsize
+4
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+bank:inst
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+reg
+# storage
+db|Sudoku.(2).cnf
+db|Sudoku.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+bank|reg.vhd
+3631dbb21c13cf7b26feb84c5618c42f
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+4
+PARAMETER_SIGNED_DEC
+USR
+ constraint(data_in)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(data_out)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+bank:inst|reg:\Registers:0:regs
+bank:inst|reg:\Registers:1:regs
+bank:inst|reg:\Registers:2:regs
+bank:inst|reg:\Registers:3:regs
+bank:inst|reg:\Registers:4:regs
+bank:inst|reg:\Registers:5:regs
+bank:inst|reg:\Registers:6:regs
+bank:inst|reg:\Registers:7:regs
+bank:inst|reg:\Registers:8:regs
+bank:inst|reg:\Registers:9:regs
+bank:inst|reg:\Registers:10:regs
+bank:inst|reg:\Registers:11:regs
+bank:inst|reg:\Registers:12:regs
+bank:inst|reg:\Registers:13:regs
+bank:inst|reg:\Registers:14:regs
+bank:inst|reg:\Registers:15:regs
+bank:inst|reg:\Registers:16:regs
+bank:inst|reg:\Registers:17:regs
+bank:inst|reg:\Registers:18:regs
+bank:inst|reg:\Registers:19:regs
+bank:inst|reg:\Registers:20:regs
+bank:inst|reg:\Registers:21:regs
+bank:inst|reg:\Registers:22:regs
+bank:inst|reg:\Registers:23:regs
+bank:inst|reg:\Registers:24:regs
+bank:inst|reg:\Registers:25:regs
+bank:inst|reg:\Registers:26:regs
+bank:inst|reg:\Registers:27:regs
+bank:inst|reg:\Registers:28:regs
+bank:inst|reg:\Registers:29:regs
+bank:inst|reg:\Registers:30:regs
+bank:inst|reg:\Registers:31:regs
+bank:inst|reg:\Registers:32:regs
+bank:inst|reg:\Registers:33:regs
+bank:inst|reg:\Registers:34:regs
+bank:inst|reg:\Registers:35:regs
+bank:inst|reg:\Registers:36:regs
+bank:inst|reg:\Registers:37:regs
+bank:inst|reg:\Registers:38:regs
+bank:inst|reg:\Registers:39:regs
+bank:inst|reg:\Registers:40:regs
+bank:inst|reg:\Registers:41:regs
+bank:inst|reg:\Registers:42:regs
+bank:inst|reg:\Registers:43:regs
+bank:inst|reg:\Registers:44:regs
+bank:inst|reg:\Registers:45:regs
+bank:inst|reg:\Registers:46:regs
+bank:inst|reg:\Registers:47:regs
+bank:inst|reg:\Registers:48:regs
+bank:inst|reg:\Registers:49:regs
+bank:inst|reg:\Registers:50:regs
+bank:inst|reg:\Registers:51:regs
+bank:inst|reg:\Registers:52:regs
+bank:inst|reg:\Registers:53:regs
+bank:inst|reg:\Registers:54:regs
+bank:inst|reg:\Registers:55:regs
+bank:inst|reg:\Registers:56:regs
+bank:inst|reg:\Registers:57:regs
+bank:inst|reg:\Registers:58:regs
+bank:inst|reg:\Registers:59:regs
+bank:inst|reg:\Registers:60:regs
+bank:inst|reg:\Registers:61:regs
+bank:inst|reg:\Registers:62:regs
+bank:inst|reg:\Registers:63:regs
+bank:inst|reg:\Registers:64:regs
+bank:inst|reg:\Registers:65:regs
+bank:inst|reg:\Registers:66:regs
+bank:inst|reg:\Registers:67:regs
+bank:inst|reg:\Registers:68:regs
+bank:inst|reg:\Registers:69:regs
+bank:inst|reg:\Registers:70:regs
+bank:inst|reg:\Registers:71:regs
+bank:inst|reg:\Registers:72:regs
+bank:inst|reg:\Registers:73:regs
+bank:inst|reg:\Registers:74:regs
+bank:inst|reg:\Registers:75:regs
+bank:inst|reg:\Registers:76:regs
+bank:inst|reg:\Registers:77:regs
+bank:inst|reg:\Registers:78:regs
+bank:inst|reg:\Registers:79:regs
+bank:inst|reg:\Registers:80:regs
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+UnitControlSudoku
+# storage
+db|Sudoku.(3).cnf
+db|Sudoku.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+unitcontrolsudoku|unitcontrolsudoku.vhd
+2e473e93a39936de474356fc676afa15
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+UnitControlSudoku:inst21
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+InputInterface
+# storage
+db|Sudoku.(4).cnf
+db|Sudoku.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+inputinterface|inputinterface.vhd
+37c65bda10bd304ab8617d33f119e0c3
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+InputInterface:inst11
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+count_adder
+# storage
+db|Sudoku.(5).cnf
+db|Sudoku.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+count_adder|count_adder.vhd
+49b1aba69f337850af81fa25b64f611d
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+modulo
+8
+PARAMETER_SIGNED_DEC
+USR
+ constraint(bcd)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(par_in)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+InputInterface:inst11|count_adder:MovX
+InputInterface:inst11|count_adder:MovY
+SolucionerOperator:inst13|count_adder:MovX
+SolucionerOperator:inst13|count_adder:MovY
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+BitmapVerifier
+# storage
+db|Sudoku.(6).cnf
+db|Sudoku.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+verifiers|bitmapverifier|bitmapverifier.vhd
+48af8335acddaee1e6bce26d3535fd8
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+BitmapVerifier:inst15
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+Mux4to1
+# storage
+db|Sudoku.(7).cnf
+db|Sudoku.(7).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+mux4to1|mux4to1.vhd
+effeebea6942a268fea7ad42d6903fea
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+Mux4to1:inst18
+Mux4to1:inst19
+Mux4to1:inst20
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+SolucionerOperator
+# storage
+db|Sudoku.(8).cnf
+db|Sudoku.(8).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+solutioneroperator|solucioneroperator.vhd
+85824238e647e33adf5422382652080
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+SolucionerOperator:inst13
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+count_adder
+# storage
+db|Sudoku.(9).cnf
+db|Sudoku.(9).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+count_adder|count_adder.vhd
+49b1aba69f337850af81fa25b64f611d
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+modulo
+9
+PARAMETER_SIGNED_DEC
+USR
+ constraint(bcd)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(par_in)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+SolucionerOperator:inst13|count_adder:NumCounter
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+Mux9to1
+# storage
+db|Sudoku.(10).cnf
+db|Sudoku.(10).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+mux9to1|mux9to1.vhd
+e5a59b4680c9a653398ed7f4ce91a5a
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+Mux9to1:inst22
+Mux9to1:inst12
+Mux9to1:inst14
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+bmap
+# storage
+db|Sudoku.(11).cnf
+db|Sudoku.(11).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+bmap|bmap.vhd
+df21f47680228eadec6e81c9e293e0dc
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+currentnum
+1
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+bmap:inst1
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+bmap
+# storage
+db|Sudoku.(12).cnf
+db|Sudoku.(12).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+bmap|bmap.vhd
+df21f47680228eadec6e81c9e293e0dc
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+currentnum
+2
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+bmap:inst7
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+bmap
+# storage
+db|Sudoku.(13).cnf
+db|Sudoku.(13).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+bmap|bmap.vhd
+df21f47680228eadec6e81c9e293e0dc
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+currentnum
+3
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+bmap:inst5
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+bmap
+# storage
+db|Sudoku.(14).cnf
+db|Sudoku.(14).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+bmap|bmap.vhd
+df21f47680228eadec6e81c9e293e0dc
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+currentnum
+4
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+bmap:inst6
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+bmap
+# storage
+db|Sudoku.(15).cnf
+db|Sudoku.(15).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+bmap|bmap.vhd
+df21f47680228eadec6e81c9e293e0dc
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+currentnum
+5
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+bmap:inst4
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+bmap
+# storage
+db|Sudoku.(16).cnf
+db|Sudoku.(16).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+bmap|bmap.vhd
+df21f47680228eadec6e81c9e293e0dc
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+currentnum
+6
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+bmap:inst8
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+bmap
+# storage
+db|Sudoku.(17).cnf
+db|Sudoku.(17).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+bmap|bmap.vhd
+df21f47680228eadec6e81c9e293e0dc
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+currentnum
+7
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+bmap:inst3
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+bmap
+# storage
+db|Sudoku.(18).cnf
+db|Sudoku.(18).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+bmap|bmap.vhd
+df21f47680228eadec6e81c9e293e0dc
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+currentnum
+8
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+bmap:inst10
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+bmap
+# storage
+db|Sudoku.(19).cnf
+db|Sudoku.(19).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+bmap|bmap.vhd
+df21f47680228eadec6e81c9e293e0dc
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+currentnum
+9
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+bmap:inst9
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+EntryVerifier
+# storage
+db|Sudoku.(20).cnf
+db|Sudoku.(20).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+verifiers|entryverifier|entryverifier.vhd
+1a42510bd8a237521eeb09a10e48c
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+EntryVerifier:inst16
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+coordenates
+# storage
+db|Sudoku.(21).cnf
+db|Sudoku.(21).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+coordenates|coordenates.vhd
+7c93ac8aa65f7ab6e189f1dbe6c26c
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+coordenates:inst2
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+verifierPlayerUpdate
+# storage
+db|Sudoku.(22).cnf
+db|Sudoku.(22).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+verifiers|verifierplayerupdate|verifierplayerupdate.vhd
+9ba7d231437750915efd857c4fadfc7
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+verifierPlayerUpdate:inst17
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# complete
+

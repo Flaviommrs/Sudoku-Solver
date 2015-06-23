@@ -1,0 +1,66 @@
+library ieee;
+use ieee.std_logic_1164.all;
+usE IEEE.std_logic_signed.all;
+USE ieee.numeric_std.ALL;
+
+Entity InputInterface is
+	port(clk,
+	 	enable,
+		enter,
+		 clear,
+		 y,
+	 	 x,
+	 	 xdir,
+	 	 ydir,
+	 	 done: in std_logic;
+	 	 data: in std_logic_vector(3 downto 0);
+	 	 load,
+	 	 go,
+		 erase: out std_logic;
+		 data_out: out std_logic_vector(3 downto 0);
+	 	 positionX, positionY: out std_logic_vector(3 downto 0)
+	 	);
+end InputInterface;
+
+Architecture behavior of InputInterface is
+
+	signal temp_pos_x: std_logic_vector(3 downto 0) := (others => '0');
+	signal temp_pos_y: std_logic_vector(3 downto 0) := (others => '0');	
+	signal carryx, carry_u : std_logic;
+	
+	component count_adder IS
+		GENERIC(modulo: Integer := 8);
+		PORT(Clock: IN STD_LOGIC ;
+			En, Set, LOAD, CLEAR, sign_negative: IN STD_LOGIC ;
+			BCD: BUFFER STD_LOGIC_VECTOR(3 DOWNTO 0) := (others =>'0');
+			PAR_IN: in STD_LOGIC_VECTOR(3 DOWNTO 0);
+			CARRY_OUT: out STD_LOGIC);
+	END component ;
+
+begin
+
+	process(clk, enable)
+	begin
+		if clk'event and clk = '1' then
+			if enable = '1' then
+				load <= enter;
+				erase <= clear;
+				go <= done;
+				data_out <= data;
+				
+			else
+				data_out <= (others => '0');
+				load	<= '0';
+				erase	<= '0';
+				go		<= '0';
+			end if;
+		end if;
+	end process;
+
+	--Movement:
+	MovX: count_adder generic map(modulo=> 8) port map(x, enable, '0', '0', clear, xdir, temp_pos_x,"0000", open);
+	MovY: count_adder generic map(modulo=> 8) port map(y, enable, '0', '0', clear, ydir, temp_pos_y,"0000", open);
+				
+	positionX <= temp_pos_y(3 downto 0);
+	positionY <= temp_pos_x(3 downto 0);
+end behavior;

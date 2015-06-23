@@ -1,0 +1,119 @@
+library ieee;
+ieee.use_std_logic_1164.all
+
+entity UnitControlSudoku is 
+	port (	load_Im,
+			go_Im_Sol,
+			erase_Im,
+			ver_bmap,
+			ver_entry,
+			ver_updatable_Im,
+			ver_updatable_Sol, 
+			Impossible_sol,
+			Possible_sol,
+			Sol_number,
+			Sol_position: in std_logic;
+			--glb_clear,
+			en_Im,
+			en_bmapVer,
+			en_entrVer,
+			en_updVer,
+			en_wr_bmaps,
+			en_wr_regs,
+			en_rd_regs,
+			en_rd_bmaps
+			en_Sol_pos,
+			en_Sol_number,
+			Sol_sign : out std_logic);
+	end UnitControl;
+		
+	
+architecture behavior of UnitControlSudoku is
+	TYPE states_UnitC IS (Input, Input_Verifications, InputRecording, InputErasing, Solucioner);
+	SIGNAL current_state : states_UnitC := Input;
+	--Signal instruction: std_logic_vector(7 downto 0);
+
+begin
+	StateMachine:
+	PROCESS (clear, clock, load_Im, go_Im_Sol, erase_Im, ver_bmap, ver_entry, ver_updatable_Im, ver_updatable_Sol , current_state)
+	BEGIN
+		IF (clear = '1') THEN
+			en_bmapVer		<= '0';
+			en_entrVer		<= '0';
+			en_updVer		<= '0';
+			en_wr_bmaps		<= '0';
+			en_wr_regs		<= '0';
+			en_rd_bmaps		<= '0';
+			en_rd_regs		<= '0';
+			en_Im			<= '0';
+			en_Sol			<= '0';
+			current_state <= Input;	
+		ELSIF (clock'EVENT AND clock = '1') THEN
+			en_bmapVer			<= '0'; 
+			en_entrVer			<= '0';
+			en_updVer			<= '0';
+			en_wr_bmaps			<= '0';
+			en_wr_regs			<= '0';
+			en_rd_bmaps			<= '0';
+			en_rd_regs			<= '0';
+			en_Im				<= '0';
+			en_Sol				<= '0';
+			
+			current_state <= Input;	
+			CASE current_state IS
+			WHEN Input =>
+				en_Im	<= '1';
+				if load_Im	= '1' then
+					current_state <= Verifications;
+				elsif go_Im_Sol = '1' then
+					current_state	<= Solutioner;
+				elsif erase_Im = '1' then
+					current_state <= --delete_num;
+				else
+					current_state <= Input;
+			when Verifications =>
+				en_bmapVer	<= '1';
+				en_entrVer	<= '1';
+				en_updVer	<= '1';
+				en_rd_bmaps <= '1';
+				current_state	<= InputRecording;
+			WHEN InputRecording	=>
+				if 	ver_bmap = '1' and ver_entry = '1' and ver_updatable_Im = '1' then 
+				en_wr_bmaps	<=	'1';
+				en_wr_regs	<=	'1';
+				current_state	<= Input;
+			when InputErasing => --Implementar 
+				
+				
+			when solutioner =>
+				current_state <= DECODE;
+			WHEN DECODE =>
+				current_state <= EX;
+			WHEN EX =>
+				CASE instruction IS
+				WHEN "000" =>
+					DM_Rd		<= '1';
+					Reg_Wr		<= '1';
+					DM_2_DBus	<= '1';
+				WHEN "001" =>
+					ALU_2_DBus	<= '1';
+					Reg_Wr		<= '1';
+					Stat_Wr		<= '1';
+				WHEN "010" =>
+					DM_Wr		<= '1';
+				WHEN "011" =>
+				WHEN "100" =>
+					IO_2_Reg	<= '1';
+					Reg_Wr		<= '1';				
+				WHEN "101" =>
+				WHEN "110" =>
+					Reg_2_IO	<= '1';
+				WHEN OTHERS =>
+					PC_Ld_En	<= '1';
+				END CASE;			
+				current_state <= FETCH;
+			END CASE;
+		END IF;
+	END PROCESS;
+
+end behavior;
